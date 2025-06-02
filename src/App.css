@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+.raleway{
+  font-family: "Raleway", sans-serif;
+}
+.lato{
+  font-family: "Lato", sans-serif;
+}
+
+
+.green{
+    color: #2F5D50;
+}
+.ivory-bg{
+    background-color: #FAF8F2;
+}
+.golden-bg{
+    background-color: #D9A441;
+}
+
+.text:hover{
+    background-color: #A3C9A8;
+}
+
+.btn-hv:hover{
+    background-color: white;
+    color: #E07A5F;
+    border-color: #E07A5F;
+}
