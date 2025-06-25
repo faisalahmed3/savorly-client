@@ -7,6 +7,7 @@ import biryani from '../../assets/biryani.png';
 import jalebi from '../../assets/jalebi.png';
 import tikka from '../../assets/tikka.png';
 import laddoo from '../../assets/laddoo.png';
+import Philosophy from '../../Components/Philosophy/Philosophy';
 
 const Hero = () => {
     return (
@@ -41,7 +42,10 @@ const Hero = () => {
                 </div>
             </div>
 
+
+            
             <Top></Top>
+            <Philosophy></Philosophy>
             <People></People>
             <Tips></Tips>
         </div>
