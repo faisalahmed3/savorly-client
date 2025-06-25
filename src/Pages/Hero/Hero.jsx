@@ -3,6 +3,10 @@ import logo from "../../assets/Savorly.png";
 import Top from '../../Components/Top/Top';
 import People from '../../Components/People/People';
 import Tips from '../../Components/Tips/Tips';
+import biryani from '../../assets/biryani.png';
+import jalebi from '../../assets/jalebi.png';
+import tikka from '../../assets/tikka.png';
+import laddoo from '../../assets/laddoo.png';
 
 const Hero = () => {
     return (
@@ -19,12 +23,12 @@ const Hero = () => {
                     </p>
                 </div>
                 
-                <div className="carousel w-full opacity-70 h-[300px] sm:h-[400px] md:h-[600px] lg:h-[700px]">
+                <div className="carousel w-full opacity-60 h-[300px] sm:h-[400px] md:h-[600px] lg:h-[700px]">
                     {[
-                        { id: "slide1", src: "https://i.ibb.co/yKwbzH4/Biryani.png", alt: "Biryani", next: "slide2", prev: "slide4" },
-                        { id: "slide2", src: "https://i.ibb.co/3m3VqGy2/Tikka.png", alt: "Tikka", next: "slide3", prev: "slide1" },
-                        { id: "slide3", src: "https://i.ibb.co/7xCRjmHt/Jalabi.png", alt: "Jalebi", next: "slide4", prev: "slide2" },
-                        { id: "slide4", src: "https://i.ibb.co/twHFbNz5/Laddo.png", alt: "Laddoo", next: "slide1", prev: "slide3" },
+                        { id: "slide1", src: biryani, alt: "Biryani", next: "slide2", prev: "slide4" },
+                        { id: "slide2", src: tikka, alt: "Tikka", next: "slide3", prev: "slide1" },
+                        { id: "slide3", src: jalebi, alt: "Jalebi", next: "slide4", prev: "slide2" },
+                        { id: "slide4", src: laddoo, alt: "Laddoo", next: "slide1", prev: "slide3" },
                     ].map(({ id, src, alt, next, prev }) => (
                         <div key={id} id={id} className="carousel-item relative w-full h-full">
                             <img src={src} alt={alt} className="w-full h-full object-cover" />

@@ -6,9 +6,11 @@ import { Outlet } from 'react-router';
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+            <Navbar />
+            <div className="pt-20">
+                <Outlet />
+            </div>
+            <Footer />
         </div>
     );
 };

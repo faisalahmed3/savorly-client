@@ -21,7 +21,9 @@ const Navbar = () => {
     };
 
     return (
-        <div className="relative z-[200] bg-base-100 drop-shadow-2xl raleway ivory-bg px-4 md:px-10 lg:px-20 mb-1">
+        <div className="fixed top-0 left-0 w-full z-[200] bg-base-100 drop-shadow-2xl raleway ivory-bg px-4 md:px-10 lg:px-20 transition-all duration-300 hover:bg-amber-50 hover:shadow-xl">
+
+
             <div className="navbar flex justify-between items-center">
 
                 {/* Navbar Start */}
