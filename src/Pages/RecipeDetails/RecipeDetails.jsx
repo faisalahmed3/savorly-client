@@ -10,7 +10,7 @@ const RecipeDetails = () => {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const res = await fetch(`https://savorly-sever.vercel.app/recipes/${id}`);
+        const res = await fetch(`http://localhost:3000/recipes/${id}`);
         if (!res.ok) throw new Error("Failed to fetch recipe");
         const data = await res.json();
         setRecipe(data);

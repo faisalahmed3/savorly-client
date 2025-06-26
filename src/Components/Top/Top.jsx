@@ -10,7 +10,7 @@ const Top = () => {
   useEffect(() => {
     const fetchTopRecipes = async () => {
       try {
-        const res = await fetch('https://savorly-sever.vercel.app/recipes/top');
+        const res = await fetch('http://localhost:3000/recipes/top');
         if (!res.ok) throw new Error('Failed to fetch top recipes');
         const data = await res.json();
         setTopRecipes(data);

@@ -30,7 +30,7 @@ const AddRecipe = () => {
         };
 
         try {
-            const res = await fetch('https://savorly-sever.vercel.app/recipes', {
+            const res = await fetch('http://localhost:3000/recipes', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

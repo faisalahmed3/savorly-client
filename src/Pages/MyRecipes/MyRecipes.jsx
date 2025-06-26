@@ -12,7 +12,7 @@ const MyRecipes = () => {
     useEffect(() => {
         const fetchUserRecipes = async () => {
             try {
-                const res = await fetch(`https://savorly-sever.vercel.app/my-recipes?email=${user.email}`);
+                const res = await fetch(`http://localhost:3000/my-recipes?email=${user.email}`);
                 const data = await res.json();
                 setRecipes(data);
             } catch (err) {
@@ -40,7 +40,7 @@ const MyRecipes = () => {
 
         if (confirm.isConfirmed) {
             try {
-                const res = await fetch(`https://savorly-sever.vercel.app/recipes/${id}?email=${user.email}`, {
+                const res = await fetch(`http://localhost:3000/recipes/${id}?email=${user.email}`, {
                     method: 'DELETE'
                 });
                 const result = await res.json();
@@ -77,7 +77,7 @@ const MyRecipes = () => {
         };
 
         try {
-            const res = await fetch(`https://savorly-sever.vercel.app/recipes/${selectedRecipe._id}?email=${user.email}`, {
+            const res = await fetch(`http://localhost:3000/recipes/${selectedRecipe._id}?email=${user.email}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(updatedRecipe)
