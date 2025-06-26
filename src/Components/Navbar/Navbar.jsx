@@ -70,7 +70,7 @@ const Navbar = () => {
                     {user && (
                         <>
                             {user.photoURL ? (
-                                <img src={user.photoURL} alt="User" className="w-10 h-10 rounded-full object-cover" title={user.displayName || "User"} />
+                                <Link to="/dashboard"><img src={user.photoURL} alt="User" className="w-10 h-10 rounded-full object-cover" title={user.displayName || "User"} /></Link>
                             ) : (
                                 <div className="w-10 h-10 rounded-full bg-gray-400 flex items-center justify-center text-white font-bold">
                                     {user.email[0].toUpperCase()}

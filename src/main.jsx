@@ -18,6 +18,7 @@ import RecipeDetails from './Pages/RecipeDetails/RecipeDetails.jsx'
 import PrivateRoute from './routes/PrivateRoute.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import Hero from './Pages/Hero/Hero.jsx';
+import Dashboard from './Pages/Dashboard/Dashboard.jsx';
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,11 @@ const router = createBrowserRouter([
     {
       path:"/recipe/:id",
       element: <PrivateRoute> <RecipeDetails></RecipeDetails> </PrivateRoute>
-    }
+    },
+    {
+      path: "/dashboard",
+      element: <Dashboard></Dashboard>,
+    },
   ]
   },
   {

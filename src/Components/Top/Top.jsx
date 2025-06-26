@@ -28,7 +28,7 @@ const Top = () => {
   if (error) return <p className="text-center text-red-500 py-10">{error}</p>;
 
   return (
-    <div className="px-4 sm:px-12 md:px-24 pb-20 raleway">
+    <div className="px-4 sm:px-12 md:px-24  raleway">
       <h1 className="text-4xl md:text-6xl text-center font-bold pt-20 pb-12 green">
         Top Recipes
       </h1>
