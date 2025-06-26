@@ -13,7 +13,7 @@ const AllRecipes = () => {
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
-                const res = await fetch('http://localhost:3000/recipes');
+                const res = await fetch('https://savorly-sever.vercel.app/recipes');
                 const data = await res.json();
                 setRecipes(data);
                 setFilteredRecipes(data);
@@ -46,7 +46,7 @@ const AllRecipes = () => {
     // Handle Like
     const handleLike = async (id) => {
         try {
-            const res = await fetch(`http://localhost:3000/recipes/${id}/like`, {
+            const res = await fetch(`https://savorly-sever.vercel.app/recipes/${id}/like`, {
                 method: "PATCH"
             });
             const result = await res.json();
