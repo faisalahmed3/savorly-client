@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
+import Loading from '../../Components/Loading/Loading';
 
 const MyRecipes = () => {
     const { user } = useContext(AuthContext);
@@ -99,7 +100,7 @@ const MyRecipes = () => {
     };
 
     if (loading) {
-        return <p className="text-center text-lg text-amber-600 py-10">Loading your recipes...</p>;
+        return <Loading></Loading>;
     }
 
     return (

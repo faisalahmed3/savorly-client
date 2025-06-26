@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router'; 
 import { AiOutlineHeart } from "react-icons/ai";
+import Loading from '../../Components/Loading/Loading';
 
 const AllRecipes = () => {
     const [recipes, setRecipes] = useState([]);
@@ -65,7 +66,7 @@ const AllRecipes = () => {
         }
     };
 
-    if (loading) return <p className="text-center text-lg text-amber-600 py-10">Loading recipes...</p>;
+    if (loading) return <Loading></Loading>;
     if (error) return <p className="text-center text-red-500 py-10">{error}</p>;
 
     return (

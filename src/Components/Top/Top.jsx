@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
+import Loading from '../Loading/Loading';
 
 const Top = () => {
   const [topRecipes, setTopRecipes] = useState([]);
@@ -24,7 +25,7 @@ const Top = () => {
     fetchTopRecipes();
   }, []);
 
-  if (loading) return <p className="text-center text-amber-600 py-10">Loading top recipes...</p>;
+  if (loading) return <Loading></Loading>;
   if (error) return <p className="text-center text-red-500 py-10">{error}</p>;
 
   return (

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
+import Loading from "../../Components/Loading/Loading";
 
 const RecipeDetails = () => {
   const { id } = useParams();
@@ -26,9 +27,7 @@ const RecipeDetails = () => {
 
   if (loading)
     return (
-      <div className="flex justify-center items-center h-screen text-amber-600 font-semibold text-xl">
-        Loading recipe...
-      </div>
+      <Loading></Loading>
     );
 
   if (error)

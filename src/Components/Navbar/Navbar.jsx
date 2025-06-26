@@ -52,7 +52,7 @@ const Navbar = () => {
                 <div className="hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-sm lg:text-lg font-semibold">
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="./all-recipes">All Recipes</Link></li>
+                        <li><Link to="/all-recipes">All Recipes</Link></li>
                         <li><Link to={getLink("/my-recipes")}>My Recipes</Link></li>
                         <li><Link to={getLink("/add-recipe")}>Add Recipe</Link></li>
                     </ul>
