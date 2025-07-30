@@ -15,6 +15,7 @@ const AddRecipe = () => {
         const instructions = form.instructions.value;
         const cuisine = form.cuisine.value;
         const prepTime = form.prepTime.value;
+        const video = form.video.value; // ✅ new video field
         const categories = Array.from(form.querySelectorAll('input[type=checkbox]:checked')).map(input => input.value);
 
         const newRecipe = {
@@ -25,6 +26,7 @@ const AddRecipe = () => {
             cuisine,
             prepTime: parseInt(prepTime),
             categories,
+            video,
             likeCount: 0,
             userEmail: user?.email || 'anonymous'
         };
@@ -115,6 +117,12 @@ const AddRecipe = () => {
                             <label className="text-xl font-bold text-amber-600 mb-2">Preparation Time (in minutes)</label>
                             <input type="number" name="prepTime" required className="input w-full border border-amber-600 p-2 rounded" placeholder="e.g., 30" />
                         </div>
+                    </div>
+
+                    {/* YouTube Video */}
+                    <div className='grid'>
+                        <label className="text-xl font-bold text-amber-600 mb-2">YouTube Video Link</label>
+                        <input type="text" name="video" className="input w-full border border-amber-600 p-2 rounded" placeholder="e.g., https://www.youtube.com/watch?v=abc123" />
                     </div>
 
                     {/* Categories */}
